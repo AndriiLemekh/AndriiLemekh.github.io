@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFinder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#vacancies">Вакансії</a></li>
+                <li><a href="#search">Пошук роботи</a></li>
+                <li><a href="#profile">Мій профіль</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search">
+            <h1>Знайди роботу своєї мрії</h1>
+            <hr>
+            <ul>
+                <li>
+                    <form>
+                        <label id = category for="category">
+                            Категорії: <select name="category">
+                            <option value="IT">IT</option>
+                            <option value= Маркетинг>Маркетинг</option>
+                            <option value="Дизайн">Дизайн</option>
+                        </select>
+                        </label>
+                    </form>
+                </li>
+                <li>
+                    <form>
+                        <label id = Region for="region">
+                            Регіон: <select name="region">
+                            <option value="IT">Київ</option>
+                            <option value= Маркетинг>Львів</option>
+                            <option value="Дизайн">Дніпро</option>
+                        </select>
+                        </label>
+                    </form>
+                </li>
+                <li>
+                    <form>
+                        <label id="Money_range" for="Money_range">
+                            Зарплата: 5000 <input type="range" id="Money_range_bar" min="5000" max="500000" step="1000" > 500000
+                        </label>
+                    </form>
+                </li>
+            </ul>
+        </section>
+
+        <section id="vacancies">
+            <h2>Актуальні вакансії</h2>
+            <div class="jobs-container">
+                <article class="job-card">
+                    <h3>Python Developer</h3>
+                    <p><strong>Компанія:</strong> TechSol</p>
+                    <p><strong>Зарплата:</strong> 45 000 грн</p>
+                    <p>Вимоги:</p>
+                    <ul>
+                        <li>Знання Python 3.x</li>
+                        <li>Досвід з Django або Flask</li>
+                        <li>Англійська B1</li>
+                    </ul>
+                </article>
+
+                <article class="job-card">
+                    <h3>UI/UX Designer</h3>
+                    <p><strong>Компанія:</strong> CreativeStudio</p>
+                    <p><strong>Зарплата:</strong> 35 000 грн</p>
+                    <p>Вимоги:</p>
+                    <ul>
+                        <li>Figma, Adobe XD</li>
+                        <li>Розуміння принципів UX</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="profile">
+            <h2>Мій профіль</h2>
+            <img src="pictures/user_pic.jpg" alt="Моє фото" width="150">
+            <p>Я студент факультету комп'ютерних наук, вивчаю веб-розробку.</p>
+            <p>Мій досвід включає роботу з алгоритмами та структурами даних.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="mailto:AndriiL@gamil.com">AndriiL@gmail.com</a>
+        <a href="tel:+380990440333"> +380 99 044 0333</a>
+        <p>Адреса: Львів вул. Кульпарківська</p>
+    </footer>
+
+</body>
+</html>
