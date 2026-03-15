@@ -71,6 +71,7 @@ section {
 
 select {
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -108,6 +109,14 @@ footer {
     margin-top: 40px;
 }
 
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 @media (max-width: 768px) {
     nav ul {
@@ -119,4 +128,9 @@ footer {
 @media (max-width: 480px) {
     h1 { font-size: 1.5rem; }
     .job-card { padding: 15px; }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }

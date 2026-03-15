@@ -22,37 +22,32 @@
         <section id="search">
             <h1>Знайди роботу своєї мрії</h1>
             <hr>
-            <ul>
-                <li>
-                    <form>
-                        <label id = category for="category">
-                            Категорії: <select name="category">
+            <form>
+                <ul>
+                    <li>
+                        <label for="cat-select">Категорії:</label>
+                        <select id="cat-select" name="category">
+                            <option value="" disabled selected></option>
                             <option value="IT">IT</option>
-                            <option value= Маркетинг>Маркетинг</option>
+                            <option value="Маркетинг">Маркетинг</option>
                             <option value="Дизайн">Дизайн</option>
                         </select>
-                        </label>
-                    </form>
-                </li>
-                <li>
-                    <form>
-                        <label id = Region for="region">
-                            Регіон: <select name="region">
+                    </li>
+                    <li>
+                        <label for="reg-select">Регіон: </label>
+                        <select id="reg-select" name="region">
+                            <option value="" disabled selected></option>
                             <option value="IT">Київ</option>
                             <option value= Маркетинг>Львів</option>
                             <option value="Дизайн">Дніпро</option>
                         </select>
-                        </label>
-                    </form>
-                </li>
-                <li>
-                    <form>
-                        <label id="Money_range" for="Money_range">
-                            Зарплата: 5000 <input type="range" id="Money_range_bar" min="5000" max="500000" step="1000" > 500000
-                        </label>
-                    </form>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <label for="salary-select">Зарплата: 5000</label>
+                            <input type="range" id="salary-select" min="5000" max="500000" step="1000" > 500000
+                    </li>
+                </ul>
+            </form>
         </section>
 
         <section id="vacancies">
@@ -98,5 +93,6 @@
         <p>Адреса: Львів вул. Кульпарківська</p>
     </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
