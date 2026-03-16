@@ -22,12 +22,12 @@
         <section id="search">
             <h1>Знайди роботу своєї мрії</h1>
             <hr>
-            <form>
+            <form onsubmit="event.preventDefault()">
                 <ul>
                     <li>
                         <label for="cat-select">Категорії:</label>
                         <select id="cat-select" name="category">
-                            <option value="" disabled selected></option>
+                            <option value="">Всі</option>
                             <option value="IT">IT</option>
                             <option value="Маркетинг">Маркетинг</option>
                             <option value="Дизайн">Дизайн</option>
@@ -36,15 +36,17 @@
                     <li>
                         <label for="reg-select">Регіон: </label>
                         <select id="reg-select" name="region">
-                            <option value="" disabled selected></option>
-                            <option value="IT">Київ</option>
-                            <option value= Маркетинг>Львів</option>
-                            <option value="Дизайн">Дніпро</option>
+                            <option value="">Всі</option>
+                            <option value="Київ">Київ</option>
+                            <option value="Львів">Львів</option>
+                            <option value="Дніпро">Дніпро</option>
                         </select>
                     </li>
                     <li>
-                        <label for="salary-select">Зарплата: 5000</label>
-                            <input type="range" id="salary-select" min="5000" max="500000" step="1000" > 500000
+                        <label for="salary-select">Зарплата:</label>
+                            <input type="range" id="salary-select" min="5000" max="50000" step="500" value="27500">
+
+                            <span id="range-value">27500</span>
                     </li>
                 </ul>
             </form>
@@ -53,29 +55,6 @@
         <section id="vacancies">
             <h2>Актуальні вакансії</h2>
             <div class="jobs-container">
-                <article class="job-card">
-                    <h3>Python Developer</h3>
-                    <p><strong>Компанія:</strong> TechSol</p>
-                    <p><strong>Зарплата:</strong> 45 000 грн</p>
-                    <p>Вимоги:</p>
-                    <ul>
-                        <li>Знання Python 3.x</li>
-                        <li>Досвід з Django або Flask</li>
-                        <li>Англійська B1</li>
-                    </ul>
-                </article>
-
-                <article class="job-card">
-                    <h3>UI/UX Designer</h3>
-                    <p><strong>Компанія:</strong> CreativeStudio</p>
-                    <p><strong>Зарплата:</strong> 35 000 грн</p>
-                    <p>Вимоги:</p>
-                    <ul>
-                        <li>Figma, Adobe XD</li>
-                        <li>Розуміння принципів UX</li>
-                    </ul>
-                </article>
-
             </div>
         </section>
 
@@ -85,6 +64,9 @@
             <p>Я студент факультету комп'ютерних наук, вивчаю веб-розробку.</p>
             <p>Мій досвід включає роботу з алгоритмами та структурами даних.</p>
         </section>
+
+        <div id="toast-container" class="toast-container"></div>
+
     </main>
 
     <footer>
