@@ -27,3 +27,5 @@ jobs:
         with:
           folder: lab3/dist
           branch: gh-pages
+          target-folder: lab3
+          clean: false
