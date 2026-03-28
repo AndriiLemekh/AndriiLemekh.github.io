@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFinder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#vacancies">Вакансії</a></li>
+                <li><a href="#search">Пошук роботи</a></li>
+                <li><a href="#profile">Мій профіль</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search">
+            <h1>Знайди роботу своєї мрії</h1>
+            <hr>
+            <form onsubmit="event.preventDefault()">
+                <ul>
+                    <li>
+                        <label for="cat-select">Категорії:</label>
+                        <select id="cat-select" name="category">
+                            <option value="">Всі</option>
+                            <option value="IT">IT</option>
+                            <option value="Маркетинг">Маркетинг</option>
+                            <option value="Дизайн">Дизайн</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="reg-select">Регіон: </label>
+                        <select id="reg-select" name="region">
+                            <option value="">Всі</option>
+                            <option value="Київ">Київ</option>
+                            <option value="Львів">Львів</option>
+                            <option value="Дніпро">Дніпро</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="salary-select">Зарплата:</label>
+                            <input type="range" id="salary-select" min="5000" max="50000" step="500" value="27500">
+
+                            <span id="range-value">27500</span>
+                    </li>
+                </ul>
+            </form>
+        </section>
+
+        <section id="vacancies">
+            <h2>Актуальні вакансії</h2>
+            <div class="jobs-container">
+            </div>
+        </section>
+
+        <section id="profile">
+            <h2>Мій профіль</h2>
+            <img src="pictures/user_pic.jpg" alt="Моє фото" width="150">
+            <p>Я студент факультету комп'ютерних наук, вивчаю веб-розробку.</p>
+            <p>Мій досвід включає роботу з алгоритмами та структурами даних.</p>
+        </section>
+
+        <div id="toast-container" class="toast-container"></div>
+
+    </main>
+
+    <footer>
+        <a href="mailto:AndriiL@gamil.com">AndriiL@gmail.com</a>
+        <a href="tel:+380990440333"> +380 99 044 0333</a>
+        <p>Адреса: Львів вул. Кульпарківська</p>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
