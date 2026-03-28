@@ -1,4 +1,4 @@
-name: Deploy Lab3 to GitHub Pages
+name: Deploy All Labs to GitHub Pages
 
 on:
   push:
@@ -16,16 +16,23 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install and Build
+      - name: Install and Build Lab3
         run: |
           cd lab3
           npm install
           npm run build
 
+      - name: Prepare Public Folder
+        run: |
+          mkdir -p public_site
+          # Копіюємо старі лаби (якщо вони існують у корені)
+          cp -r lab1 public_site/ || echo "lab1 not found"
+          cp -r lab2 public_site/ || echo "lab2 not found"
+          # Копіюємо зібрану третю лабу в підпапку lab3
+          cp -r lab3/dist public_site/lab3
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: lab3/dist
+          folder: public_site
           branch: gh-pages
-          target-folder: lab3
-          clean: false
