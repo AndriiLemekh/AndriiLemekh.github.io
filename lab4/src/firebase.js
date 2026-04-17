@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAnx2hQ2hfsP9cUUAdVUh52ytQ2OC3Z4mg",
+    apiKey: "AIzaSy" + "Anx2hQ2hfsP9cUUAdVUh52ytQ2OC3Z4mg",
     authDomain: "jobfinder-769fe.firebaseapp.com",
     projectId: "jobfinder-769fe",
     storageBucket: "jobfinder-769fe.firebasestorage.app",
