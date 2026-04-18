@@ -55,7 +55,8 @@ function App() {
     const fetchUserAppliedJobs = async () => {
       if (user) {
         try {
-          const response = await fetch(`http://localhost:5000/api/applications/${user.uid}`);
+          const response = await fetch(
+              `https://jobfinder-backend-y338.onrender.com/api/applications/${user.uid}`);
           if (response.ok) {
             const applied = await response.json();
             setAppliedJobIds(applied.map(j => j.id));
@@ -92,7 +93,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/applications", {
+      const response = await fetch("https://jobfinder-backend-y338.onrender.com/api/applications", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

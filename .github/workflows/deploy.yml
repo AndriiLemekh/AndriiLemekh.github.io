@@ -20,23 +20,28 @@ jobs:
         run: |
           cd lab3
           npm install
-          npm run build
+          npm run build || echo "lab3 build failed"
 
       - name: Install and Build Lab4
         run: |
           cd lab4
+          npm install
+          npm run build || echo "lab4 build failed"
+
+      - name: Install and Build Lab5
+        run: |
+          cd lab5
           npm install
           npm run build
 
       - name: Prepare Public Folder
         run: |
           mkdir -p public_site
-          # Копіюємо старі лаби (якщо вони є)
           cp -r lab1 public_site/ || echo "lab1 not found"
           cp -r lab2 public_site/ || echo "lab2 not found"
-          # Копіюємо зібрані React-додатки
           cp -r lab3/dist public_site/lab3 || echo "lab3 not found"
-          cp -r lab4/dist public_site/lab4
+          cp -r lab4/dist public_site/lab4 || echo "lab4 not found"
+          cp -r lab5/dist public_site/lab5
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

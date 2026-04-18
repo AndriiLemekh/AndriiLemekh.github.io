@@ -32,7 +32,7 @@ function UserProfile({ showToast, onJobRemoved }) {
                 }
 
                 try {
-                    const response = await fetch(`http://localhost:5000/api/applications/${uid}`);
+                    const response = await fetch(`https://jobfinder-backend-y338.onrender.com/api/applications/${uid}`);
                     if (response.ok) {
                         const jobs = await response.json();
                         setAppliedJobs(jobs);
